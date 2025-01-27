@@ -1,0 +1,26 @@
+-- boom
+local stop = Instance.new("Sound")
+stop.Parent = game.SoundService
+stop.SoundId = "rbxassetid://6187757915"
+-- play
+stop.Playing = true
+task.wait(4.7)
+local plrname = game.Players.LocalPlayer.Name
+local stringee = Instance.new("StringValue")
+stringee.Value = plrname
+huii = stringee.Value
+
+
+
+
+local expl = Instance.new("Explosion")
+expl.Position = game.Players.LocalPlayer.Character.Head.Position
+expl.Parent = game.Workspace
+
+task.wait(1.5)
+--kick
+local bai = Instance.new("Sound")
+bai.SoundId = "rbxassetid://104269922408932"
+bai.Parent = game.SoundService
+bai.Playing = true
+game.Players.LocalPlayer:Kick("BYE BYE: Detected by AntiCheat")
