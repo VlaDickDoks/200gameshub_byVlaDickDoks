@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- boom
 local stop = Instance.new("Sound")
 stop.Parent = game.SoundService
@@ -10,17 +25,66 @@ local stringee = Instance.new("StringValue")
 stringee.Value = plrname
 huii = stringee.Value
 
-
+game.Players.RespawnTime = 9999
 
 
 local expl = Instance.new("Explosion")
 expl.Position = game.Players.LocalPlayer.Character.Head.Position
 expl.Parent = game.Workspace
 
-task.wait(1.5)
+
+task.wait(0.07)
+-- jeff
+local sgui = Instance.new("ScreenGui")
+sgui.Parent = game.Players.LocalPlayer.PlayerGui
+sgui.IgnoreGuiInset = true
+
+
+
+local jeff = Instance.new("ImageLabel")
+jeff.Parent = sgui
+jeff.BackgroundTransparency = 1
+jeff.Image = "http://www.roblox.com/asset/?id=668614178"
+jeff.Position = UDim2.new(0, 0, 0)
+
+local resolution = sgui.AbsoluteSize
+local pixelX = resolution.X
+local pixelY = resolution.Y
+
+
+print("Player resolution: "..pixelX.."x"..pixelY)
+jeff.Size = UDim2.new(0,pixelX, 0,pixelY)
+
+local soundjeff = Instance.new("Sound")
+soundjeff.SoundId = "rbxassetid://192088330"
+soundjeff.Parent = game.SoundService
+
+soundjeff.Playing = true
+
+task.wait(0.3)
+repeat task.wait(0.05)
+
+jeff.ImageTransparency += 0.1
+
+until jeff.ImageTransparency == 1
+
+task.wait(2.5)
+
 --kick
 local bai = Instance.new("Sound")
 bai.SoundId = "rbxassetid://104269922408932"
 bai.Parent = game.SoundService
 bai.Playing = true
 game.Players.LocalPlayer:Kick("BYE BYE: Detected by AntiCheat")
+
+
+
+
+
+
+
+
+
+
+
+
