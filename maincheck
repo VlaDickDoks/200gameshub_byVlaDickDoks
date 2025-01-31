@@ -61,6 +61,21 @@ soundjeff.Parent = game.SoundService
 
 soundjeff.Playing = true
 
+local ambient = Instance.new("ColorCorrectionEffect")
+ambient.Parent = game.Lighting
+
+ambient.TintColor = Color3.new(0.372549, 0, 0.00784314)
+
+
+local eblan2 = Instance.new("Atmosphere")
+eblan2.Color = Color3.new(0.764706, 0, 0)
+eblan2.Decay = Color3.new(0.164706, 0.164706, 0.164706)
+
+
+eblan2.Glare = 6
+eblan2.Haze = 1
+eblan2.Parent = game.Lighting
+
 task.wait(0.3)
 repeat task.wait(0.05)
 
@@ -76,7 +91,6 @@ bai.SoundId = "rbxassetid://104269922408932"
 bai.Parent = game.SoundService
 bai.Playing = true
 game.Players.LocalPlayer:Kick("BYE BYE: Detected by AntiCheat")
-
 
 
 
